@@ -26,5 +26,5 @@ Actively ramping up contributions: bounties, bug fixes, documentation and small 
 
 ## Find me
 
-- Instagram: @m_anishraja (https://instagram.com/m_anishraja)
+- Instagram: @m_anishraja (https://instagram.com/iamanish.official)
 - GitHub Sponsors: https://github.com/sponsors/anishraja04
