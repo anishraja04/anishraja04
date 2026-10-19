@@ -100,6 +100,39 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 ---
 
+## Live activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/anishraja04/anishraja04/main/assets/activity-card-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/anishraja04/anishraja04/main/assets/activity-card-light.svg" />
+    <img src="assets/activity-card-light.svg" width="620" alt="Open-source contribution summary" />
+  </picture>
+</p>
+
+<!-- activity:start -->
+
+**7 pull requests** to repositories I do not own · 3 merged · 3 open
+
+**[BasedHardware/omi](https://github.com/BasedHardware/omi)**
+
+- [#22010 harden: enforce the conversation length bounds the CLI already declares](https://github.com/BasedHardware/omi/pull/22010) `OPEN`
+- [#22009 fix: record an unreadable config instead of raising out of load()](https://github.com/BasedHardware/omi/pull/22009) `MERGED`
+- [#22008 fix: stop reporting an unknown rate-limit policy as its own budget](https://github.com/BasedHardware/omi/pull/22008) `MERGED`
+- [#22007 fix: classify IPv4-mapped addresses in the webhook target check](https://github.com/BasedHardware/omi/pull/22007) `MERGED`
+- [#13202 python-cli: add memory create-batch from UTF-8 JSON file](https://github.com/BasedHardware/omi/pull/13202) `OPEN`
+- [#13192 python-cli : file option to omi memory create](https://github.com/BasedHardware/omi/pull/13192) `OPEN`
+
+**[harbor-framework/terminal-bench](https://github.com/harbor-framework/terminal-bench)**
+
+- [#1908 Add legacy-ledger-migration task: Python 2.7 batch to Python 3 byte-exact port](https://github.com/harbor-framework/terminal-bench/pull/1908) `CLOSED`
+
+<sub>Updated automatically from the GitHub API. Self-authored pull requests are excluded.</sub>
+
+<!-- activity:end -->
+
+---
+
 ## Shipped and live
 
 | Product | What it does |

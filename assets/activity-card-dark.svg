@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 92" width="620" height="92" role="img" aria-label="Open-source contribution summary">
+  <title>7 pull requests across 2 repositories</title>
+  <text x="20" y="20" font-size="12" fill="#e6edf3" letter-spacing="1.2" font-family="system-ui,-apple-system,Segoe UI,sans-serif">OPEN SOURCE</text>
+  <text x="20" y="46" font-size="34" font-weight="700" fill="#3fb8af" font-family="ui-monospace,monospace">7</text>
+  <text x="20" y="70" font-size="13" fill="#8b949e" font-family="system-ui,-apple-system,Segoe UI,sans-serif">pull requests</text>
+  <text x="170" y="46" font-size="34" font-weight="700" fill="#3fb8af" font-family="ui-monospace,monospace">3</text>
+  <text x="170" y="70" font-size="13" fill="#8b949e" font-family="system-ui,-apple-system,Segoe UI,sans-serif">merged</text>
+  <text x="320" y="46" font-size="34" font-weight="700" fill="#3fb8af" font-family="ui-monospace,monospace">3</text>
+  <text x="320" y="70" font-size="13" fill="#8b949e" font-family="system-ui,-apple-system,Segoe UI,sans-serif">open</text>
+  <text x="470" y="46" font-size="34" font-weight="700" fill="#3fb8af" font-family="ui-monospace,monospace">2</text>
+  <text x="470" y="70" font-size="13" fill="#8b949e" font-family="system-ui,-apple-system,Segoe UI,sans-serif">repositories</text>
+</svg>

@@ -1,0 +1,45 @@
+name: Update activity
+
+on:
+  schedule:
+    # Once a day. The job commits only when the rendered content actually
+    # changed, so a quiet day leaves no commit behind.
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-activity
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render activity from the GitHub API
+        env:
+          # The default token only sees public data, which is exactly what
+          # belongs on a public profile. The script filters private
+          # repositories anyway, so both layers have to fail to leak one.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_activity.py
+
+      - name: Commit when something changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No change. Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Refresh activity from the GitHub API"
+          git push
