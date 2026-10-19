@@ -1,7 +1,20 @@
 <h1 align="center">Md Anish Ahamad</h1>
 
 <p align="center">
-  <strong>I write the tasks and verifiers that test AI coding agents — and I break things on purpose to prove the verifier works.</strong>
+  AI evaluation &nbsp;·&nbsp; task and verifier authoring &nbsp;·&nbsp; backend engineering
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/anishraja04/anishraja04/main/assets/typewriter-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/anishraja04/anishraja04/main/assets/typewriter-light.svg" />
+    <img src="assets/typewriter-light.svg" width="567" alt="I make agents prove it." />
+  </picture>
+</p>
+
+<p align="center">
+  I turn domain problems into executable benchmark tasks: the environment, the<br/>
+  reference solution and the scorer, across data engineering, STEM and CFD.
 </p>
 
 <p align="center">
@@ -21,11 +34,12 @@ scorer that decides whether an agent genuinely solved it or merely looked like i
 
 | Where | Benchmark | What |
 | --- | --- | --- |
-| **Handshake AI** · Project Dynamo | Terminal-Bench 2 | Benchmark task development — authoring tasks that evaluate AI agents working in terminal environments. |
+| **Handshake AI** · Project Dynamo | Terminal-Bench 2 | Benchmark task development, authoring tasks that evaluate AI agents working in terminal environments. |
 | **Handshake AI** · Project Insight | Terminal-Bench 4 | Benchmark task development, hands-on across task authoring and grading agent output. |
-| **Imperium** (via Mercor) | Real World Engineering | Data Engineering task author — long-horizon engineering tasks. |
-| **Alignerr** | — | CFD task design on **OpenFOAM**, turning simulation problems into checkable engineering tasks. |
-| **Ethara AI** | — | LLM post-training. |
+| **Handshake AI** · Project LUMIERE | STEM (Engineering) | Engineering-domain task authoring, where a correct answer has to come from the underlying physics rather than from pattern-matching the prompt. |
+| **Imperium** (via Mercor) | Real World Engineering | Data Engineering task author for long-horizon engineering tasks. |
+| **Alignerr** | | CFD task design on **OpenFOAM**, turning simulation problems into checkable engineering tasks. |
+| **Ethara AI** | | LLM post-training. |
 
 **Domains I have authored in:** data engineering · STEM and engineering · computational fluid dynamics
 
@@ -69,16 +83,16 @@ the Omi wearable. Each one is a real defect, and each ships the regression test 
 
 | PR | What was wrong | Status |
 | --- | --- | --- |
-| [#13202](https://github.com/BasedHardware/omi/pull/13202) | `memory create-batch` from UTF-8 JSON — BOM handling, and a preflight that rejects over-long entries before any HTTP request. 16 tests. | **Approved** |
+| [#13202](https://github.com/BasedHardware/omi/pull/13202) | `memory create-batch` from UTF-8 JSON, with BOM handling and a preflight that rejects over-long entries before any HTTP request. 16 tests. | **Approved** |
 | [#13192](https://github.com/BasedHardware/omi/pull/13192) | `--file` for `memory create`, mapping every file-read failure to a usage error instead of a traceback. 18 tests. | **Approved** |
 | [#22007](https://github.com/BasedHardware/omi/pull/22007) | An IPv4-mapped address slipped past the webhook delivery check, so `webhook verify` printed `pass` for a URL Omi silently drops. | Open |
-| [#22008](https://github.com/BasedHardware/omi/pull/22008) | A 429 reported the rate-limit policy as its own budget — `dev:ask (dev:ask)` — on 13 of the 16 real policies. | Open |
+| [#22008](https://github.com/BasedHardware/omi/pull/22008) | A 429 reported the rate-limit policy as its own budget, `dev:ask (dev:ask)`, on 13 of the 16 real policies. | Open |
 | [#22009](https://github.com/BasedHardware/omi/pull/22009) | An unreadable config crashed every command, including `omi version`, and left the guard protecting it disarmed. | Open |
 | [#22010](https://github.com/BasedHardware/omi/pull/22010) | Length limits the CLI declared and documented were never actually enforced. | Open |
 
 > A maintainer on #13192: *"clean, narrow change with genuinely good test coverage."*
 
-**Terminal-Bench task — legacy ledger migration.**
+**Terminal-Bench task: legacy ledger migration.**
 [A task I authored](https://github.com/harbor-framework/terminal-bench/pull/1908): a Python 2.7 batch
 ledger system ported to Python 3 **byte-exactly**. BAI, CSV and fixed-width ingest, a reconciliation
 engine, a Docker environment, and a scorer running 16 hidden input corpora against golden outputs.
@@ -98,24 +112,24 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 ## Projects
 
-**[incident-engineer](https://github.com/anishraja04/incident-engineer)** — two agents that find and fix
+**[incident-engineer](https://github.com/anishraja04/incident-engineer)** - two agents that find and fix
 real bugs. A fix is only accepted once the full test suite passes. **11 of 11** incidents resolved,
 against **0 of 11** for a single-prompt baseline. The gate is the point: the agent does not get to
 declare its own success.
 
-**[team-task-manager](https://github.com/anishraja04/team-task-manager)** — KaamSathi. Django REST,
+**[team-task-manager](https://github.com/anishraja04/team-task-manager)** - KaamSathi. Django REST,
 React and PostgreSQL with JWT auth and role-based access. Live on Railway.
 
-**[ai_resume_generator](https://github.com/anishraja04/ai_resume_generator)** — Spring Boot REST API,
+**[ai_resume_generator](https://github.com/anishraja04/ai_resume_generator)** - Spring Boot REST API,
 React front end, pluggable LLM backend.
 
-**[mermail-expense-tracker](https://github.com/anishraja04/mermail-expense-tracker)** — an MCP skill
+**[mermail-expense-tracker](https://github.com/anishraja04/mermail-expense-tracker)** - an MCP skill
 turning receipt emails into an expense ledger. Treats every email as untrusted input.
 
-**[cloud-native-devops](https://github.com/anishraja04/cloud-native-devops)** — Terraform for an AWS VPC
+**[cloud-native-devops](https://github.com/anishraja04/cloud-native-devops)** - Terraform for an AWS VPC
 and EC2, a Dockerised app behind Nginx, GitHub Actions deploying on every push.
 
-**[api-etl-pipeline](https://github.com/anishraja04/api-etl-pipeline)** — pulls records from external
+**[api-etl-pipeline](https://github.com/anishraja04/api-etl-pipeline)** - pulls records from external
 REST APIs, cleans the JSON, loads it into PostgreSQL. FastAPI.
 
 <details>
@@ -123,7 +137,7 @@ REST APIs, cleans the JSON, loads it into PostgreSQL. FastAPI.
 
 <br/>
 
-Prototypes and practice projects, listed honestly as such — a few hundred lines each, not systems:
+Prototypes and practice projects, listed honestly as such, a few hundred lines each, not systems:
 [document-rag-system](https://github.com/anishraja04/document-rag-system) (FastAPI, sentence-transformers,
 FAISS), [multi-agent-assistant](https://github.com/anishraja04/multi-agent-assistant) (LangGraph),
 [concurrent-task-processor](https://github.com/anishraja04/concurrent-task-processor) (Java concurrency,

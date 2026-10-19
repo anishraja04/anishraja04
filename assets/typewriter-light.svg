@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567 96"
+     width="567" height="96" role="img"
+     aria-label="I make agents prove it.">
+  <title>I make agents prove it.</title>
+  <defs>
+    <clipPath id="reveal">
+      <rect x="58" y="20" height="56" width="0">
+        <animate attributeName="width" values="0.0;20.4;40.8;61.2;81.6;102.0;122.4;142.8;163.2;183.6;204.0;224.4;244.8;265.2;285.6;306.0;326.4;346.8;367.2;387.6;408.0;428.4;448.8;469.2" keyTimes="0.0;0.0195;0.039;0.0585;0.078;0.0975;0.1169;0.1364;0.1559;0.1754;0.1949;0.2144;0.2339;0.2534;0.2729;0.2924;0.3118;0.3313;0.3508;0.3703;0.3898;0.4093;0.4288;0.4483"
+                 dur="5.800000000000001s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+    <style>
+      .mono {
+        font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+        font-size: 34px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <text x="18" y="60" class="mono" fill="#0b6477">&gt;</text>
+  <g clip-path="url(#reveal)">
+    <text x="58" y="60" class="mono" fill="#0f1012"
+          textLength="469.2" lengthAdjust="spacing">I make agents prove it.</text>
+  </g>
+  <rect x="531.2" y="30" width="13" height="40" fill="#18a05f">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1"
+             dur="1.06s" repeatCount="indefinite" />
+  </rect>
+</svg>
