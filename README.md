@@ -1,95 +1,132 @@
-# Hi, I'm Anish
+<h1 align="center">Md Anish Ahamad</h1>
 
-I build backend services, and I work out where AI-generated code goes wrong.
+<p align="center">
+  <strong>I write the tasks and verifiers that test AI coding agents — and I break things on purpose to prove the verifier works.</strong>
+</p>
 
-That second part is my actual job. At **Handshake** I write software engineering
-tasks that are used to test AI coding agents, then grade the code they produce.
-Before that I designed CFD/OpenFOAM tasks at **Alignerr** and worked on LLM
-post-training at **Ethara AI**. Writing a task properly means building the
-environment it runs in and the verifier that decides whether an agent really
-solved it - not just describing the problem.
+<p align="center">
+  <a href="https://github.com/BasedHardware/omi/pulls?q=is%3Apr+author%3Aanishraja04"><img src="https://img.shields.io/badge/omi_CLI-6_pull_requests-0B6477?style=for-the-badge&logo=github&logoColor=white" height="26" alt="omi pull requests" /></a>&nbsp;
+  <a href="https://github.com/search?q=is%3Apr+author%3Aanishraja04&type=pullrequests"><img src="https://img.shields.io/badge/Open_source-PRs-24292F?style=for-the-badge&logo=git&logoColor=white" height="26" alt="Open-source pull requests" /></a>&nbsp;
+  <a href="https://anishahamad.com"><img src="https://img.shields.io/badge/Portfolio-anishahamad.com-18A05F?style=for-the-badge&logo=firefox&logoColor=white" height="26" alt="Portfolio" /></a>
+</p>
 
-## Open source
+<p align="center"><em>Every claim on this page links to something you can open and check.</em></p>
 
-**[BasedHardware/omi](https://github.com/BasedHardware/omi)** - the Python CLI
-for the Omi wearable. Both reviewed and approved:
+---
 
-- [#13202](https://github.com/BasedHardware/omi/pull/13202) - `memory create-batch`
-  from a UTF-8 JSON file, with BOM handling and a preflight that rejects
-  over-long entries before any HTTP request. 16 tests.
-- [#13192](https://github.com/BasedHardware/omi/pull/13192) - a `--file` option
-  for `memory create`, mapping every file-read failure to a usage error instead
-  of a traceback. 18 tests.
+## Benchmark & evaluation work
 
-Four more open, each a bug found by reading the code and shipped with the
-regression test that fails without the fix:
+My day job is adversarial: take a domain problem, turn it into an executable task, then build the
+scorer that decides whether an agent genuinely solved it or merely looked like it did.
 
-- [#22007](https://github.com/BasedHardware/omi/pull/22007) - an IPv4-mapped
-  address slips past the webhook delivery check, so `webhook verify` reports
-  `pass` for a URL Omi silently drops.
-- [#22008](https://github.com/BasedHardware/omi/pull/22008) - a 429 reports the
-  rate-limit policy as its own budget (`dev:ask (dev:ask)`), which hit 13 of the
-  16 real policies.
-- [#22009](https://github.com/BasedHardware/omi/pull/22009) - an unreadable
-  config file crashes every command, including `omi version`, and leaves the
-  guard that protects it disarmed.
-- [#22010](https://github.com/BasedHardware/omi/pull/22010) - length limits the
-  CLI declares and documents were never actually enforced.
+| Where | What |
+| --- | --- |
+| **Handshake AI** · Project Dynamo | Benchmark task development for **Terminal-Bench 2** — authoring tasks that evaluate AI agents in terminal environments. |
+| **Handshake AI** · Project Insight | Benchmark task development for **Terminal-Bench 4**, hands-on across task authoring and grading. |
+| **Alignerr** | CFD task design on **OpenFOAM** — turning simulation problems into checkable engineering tasks. |
+| **Ethara AI** | LLM post-training. |
+| **Imperium** (Mercor) | Data Engineering task author. |
 
-**[harbor-framework/terminal-bench](https://github.com/harbor-framework/terminal-bench/pull/1908)** -
-a task I authored for measuring coding agents: a Python 2.7 batch ledger system
-ported to Python 3 byte-exactly, shipped as a Docker environment plus a verifier
-that runs 16 hidden input corpora against golden outputs. 276 files.
+**Domains I have authored in:** data engineering · STEM and engineering · computational fluid dynamics
+
+The part that matters is not the problem statement. It is the environment that runs reproducibly, the
+reference solution, and a scorer strict enough that a plausible-looking wrong answer still fails.
+
+---
+
+## Open source: found by reading the code
+
+Six pull requests to [**BasedHardware/omi**](https://github.com/BasedHardware/omi), the Python CLI for
+the Omi wearable. Each one is a real defect, and each ships the regression test that fails without the fix.
+
+| PR | What was wrong | Status |
+| --- | --- | --- |
+| [#13202](https://github.com/BasedHardware/omi/pull/13202) | `memory create-batch` from UTF-8 JSON — BOM handling, and a preflight that rejects over-long entries before any HTTP request. 16 tests. | **Approved** |
+| [#13192](https://github.com/BasedHardware/omi/pull/13192) | `--file` for `memory create`, mapping every file-read failure to a usage error instead of a traceback. 18 tests. | **Approved** |
+| [#22007](https://github.com/BasedHardware/omi/pull/22007) | An IPv4-mapped address slipped past the webhook delivery check, so `webhook verify` printed `pass` for a URL Omi silently drops. | Open |
+| [#22008](https://github.com/BasedHardware/omi/pull/22008) | A 429 reported the rate-limit policy as its own budget — `dev:ask (dev:ask)` — on 13 of the 16 real policies. | Open |
+| [#22009](https://github.com/BasedHardware/omi/pull/22009) | An unreadable config crashed every command, including `omi version`, and left the guard protecting it disarmed. | Open |
+| [#22010](https://github.com/BasedHardware/omi/pull/22010) | Length limits the CLI declared and documented were never actually enforced. | Open |
+
+> A maintainer on #13192: *"clean, narrow change with genuinely good test coverage."*
+
+**Terminal-Bench task — legacy ledger migration.**
+[A task I authored](https://github.com/harbor-framework/terminal-bench/pull/1908): a Python 2.7 batch
+ledger system ported to Python 3 **byte-exactly**. BAI, CSV and fixed-width ingest, a reconciliation
+engine, a Docker environment, and a scorer running 16 hidden input corpora against golden outputs.
+276 files.
+
+---
 
 ## Shipped and live
 
-**[exactsizetool.com](https://exactsizetool.com)** - resizes exam photos and
-signatures to an exact KB target, for Indian government application forms that
-reject anything outside a narrow byte range.
+| Product | What it does |
+| --- | --- |
+| **[exactsizetool.com](https://exactsizetool.com)** | Resizes exam photos and signatures to an exact KB target, for Indian government forms that reject anything outside a narrow byte range. |
+| **[gateguide.co.in](https://gateguide.co.in)** | GATE 2027 preparation books across CSE, ECE, EE, ME, Civil and Data Science. |
+| **[anishahamad.com](https://anishahamad.com)** | My portfolio. Hand-written, no template. |
 
-**[gateguide.co.in](https://gateguide.co.in)** - GATE 2027 preparation books
-across CSE, ECE, EE, ME, Civil and Data Science.
-
-**[anishahamad.com](https://anishahamad.com)** - my portfolio. Hand-written, no
-template.
+---
 
 ## Projects
 
-**[incident-engineer](https://github.com/anishraja04/incident-engineer)** - two
-agents that find and fix real bugs. A fix is only accepted once the full test
-suite passes. 11 of 11 incidents resolved, against 0 of 11 for a single-prompt
-baseline.
+**[incident-engineer](https://github.com/anishraja04/incident-engineer)** — two agents that find and fix
+real bugs. A fix is only accepted once the full test suite passes. **11 of 11** incidents resolved,
+against **0 of 11** for a single-prompt baseline. The gate is the point: the agent does not get to
+declare its own success.
 
-**[team-task-manager](https://github.com/anishraja04/team-task-manager)** -
-KaamSathi. Django REST, React and PostgreSQL with JWT auth and role-based
-access. Live on Railway.
+**[team-task-manager](https://github.com/anishraja04/team-task-manager)** — KaamSathi. Django REST,
+React and PostgreSQL with JWT auth and role-based access. Live on Railway.
 
-**[ai_resume_generator](https://github.com/anishraja04/ai_resume_generator)** -
-Spring Boot REST API with a React front end and a pluggable LLM backend.
+**[ai_resume_generator](https://github.com/anishraja04/ai_resume_generator)** — Spring Boot REST API,
+React front end, pluggable LLM backend.
 
-**[mermail-expense-tracker](https://github.com/anishraja04/mermail-expense-tracker)** -
-an MCP skill that turns receipt emails into an expense ledger. Treats every
-email as untrusted input.
+**[mermail-expense-tracker](https://github.com/anishraja04/mermail-expense-tracker)** — an MCP skill
+turning receipt emails into an expense ledger. Treats every email as untrusted input.
 
-**[cloud-native-devops](https://github.com/anishraja04/cloud-native-devops)** -
-Terraform for an AWS VPC and EC2, a Dockerised app behind Nginx, and GitHub
-Actions deploying on every push.
+**[cloud-native-devops](https://github.com/anishraja04/cloud-native-devops)** — Terraform for an AWS VPC
+and EC2, a Dockerised app behind Nginx, GitHub Actions deploying on every push.
 
-**[api-etl-pipeline](https://github.com/anishraja04/api-etl-pipeline)** - pulls
-records from external REST APIs, cleans up the JSON and loads it into
-PostgreSQL. FastAPI.
+**[api-etl-pipeline](https://github.com/anishraja04/api-etl-pipeline)** — pulls records from external
+REST APIs, cleans the JSON, loads it into PostgreSQL. FastAPI.
 
-## What I work with
+<details>
+<summary><strong>Smaller repositories</strong></summary>
 
-**Languages** Python, Java, SQL, JavaScript
-**Backend** FastAPI, Spring Boot, Django REST, REST API design
-**Data** PostgreSQL, MySQL, MongoDB
-**Infra** Docker, GitHub Actions, Terraform, AWS (EC2, VPC), Linux
-**AI** LLM evaluation, agent architecture, task and verifier design, LangGraph,
-FAISS, MCP
+<br/>
+
+Prototypes and practice projects, listed honestly as such — a few hundred lines each, not systems:
+[document-rag-system](https://github.com/anishraja04/document-rag-system) (FastAPI, sentence-transformers,
+FAISS), [multi-agent-assistant](https://github.com/anishraja04/multi-agent-assistant) (LangGraph),
+[concurrent-task-processor](https://github.com/anishraja04/concurrent-task-processor) (Java concurrency,
+with tests), [backend-order-system](https://github.com/anishraja04/backend-order-system) (Spring Boot,
+Docker, GitHub Actions deploy), [lean4-formal-proofs](https://github.com/anishraja04/lean4-formal-proofs)
+(Lean 4 foundations).
+
+</details>
+
+---
+
+## Stack
+
+| | |
+| --- | --- |
+| **Languages** | Python · Java · SQL · JavaScript |
+| **Backend** | FastAPI · Spring Boot · Django REST · REST API design |
+| **Data** | PostgreSQL · MySQL · MongoDB |
+| **Infra** | Docker · GitHub Actions · Terraform · AWS (EC2, VPC) · Linux |
+| **Evaluation** | Task and verifier design · reproducible environments · scorer calibration · failure analysis |
+| **Simulation** | OpenFOAM · CFD task design |
+
+### Currently learning
+
+Kubernetes · CUDA and GPU kernel profiling · Lean 4 for certificate-based verification · distributed
+data processing at scale
+
+---
 
 ## Find me
 
-- Portfolio: [anishahamad.com](https://anishahamad.com)
-- LinkedIn: [md-anish-ahamad](https://linkedin.com/in/md-anish-ahamad)
-- Email: mdanisahamad2003@gmail.com
+[anishahamad.com](https://anishahamad.com) · [LinkedIn](https://linkedin.com/in/md-anish-ahamad) · mdanisahamad2003@gmail.com
+
+B.Tech Computer Science, Noida Institute of Engineering and Technology, 2026
