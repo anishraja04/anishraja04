@@ -78,17 +78,24 @@ reference solution, and a scorer strict enough that a plausible-looking wrong an
 
 ## Open source: found by reading the code
 
-Six pull requests to [**BasedHardware/omi**](https://github.com/BasedHardware/omi), the Python CLI for
-the Omi wearable. Each one is a real defect, and each ships the regression test that fails without the fix.
+My contributions to [**BasedHardware/omi**](https://github.com/BasedHardware/omi), the Python CLI for
+the Omi wearable, are all the same shape: a defect nobody had reported, found by reading the code,
+fixed in one narrow diff, and shipped with the regression test that fails without it. The live list
+below is generated from the GitHub API, so it is current rather than something I remembered to update.
 
-| PR | What was wrong | Status |
-| --- | --- | --- |
-| [#13202](https://github.com/BasedHardware/omi/pull/13202) | `memory create-batch` from UTF-8 JSON, with BOM handling and a preflight that rejects over-long entries before any HTTP request. 16 tests. | **Approved** |
-| [#13192](https://github.com/BasedHardware/omi/pull/13192) | `--file` for `memory create`, mapping every file-read failure to a usage error instead of a traceback. 18 tests. | **Approved** |
-| [#22007](https://github.com/BasedHardware/omi/pull/22007) | An IPv4-mapped address slipped past the webhook delivery check, so `webhook verify` printed `pass` for a URL Omi silently drops. | Open |
-| [#22008](https://github.com/BasedHardware/omi/pull/22008) | A 429 reported the rate-limit policy as its own budget, `dev:ask (dev:ask)`, on 13 of the 16 real policies. | Open |
-| [#22009](https://github.com/BasedHardware/omi/pull/22009) | An unreadable config crashed every command, including `omi version`, and left the guard protecting it disarmed. | Open |
-| [#22010](https://github.com/BasedHardware/omi/pull/22010) | Length limits the CLI declared and documented were never actually enforced. | Open |
+Four of them, to show what that means in practice:
+
+- An IPv4-mapped address slipped past the webhook delivery check, so `omi app webhook verify` printed
+  **pass** for a URL the backend silently drops. The rule was written for one spelling of an address
+  and `::ffff:100.64.0.1` is another.
+- A 429 reported the rate-limit policy as its own budget, `dev:ask (dev:ask)`, because the lookup
+  defaulted to its own key. The table held 3 of the 16 policies the backend actually defines, so this
+  fired on most real rate limits.
+- An unreadable config file crashed **every** command, `omi version` included, and left the guard
+  that protects it disarmed. The function documented the opposite behaviour; the file open just sat
+  outside the `try`.
+- `b64decode(validate=True)` rejects newlines, so a line-wrapped screenshot payload, which is what
+  every MIME encoder produces, was refused as corrupt data.
 
 > A maintainer on #13192: *"clean, narrow change with genuinely good test coverage."*
 
@@ -112,7 +119,7 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 <!-- activity:start -->
 
-**11 pull requests** to repositories I do not own · 7 merged · 3 open
+**11 pull requests** to repositories I do not own · 8 merged · 2 open
 
 **[BasedHardware/omi](https://github.com/BasedHardware/omi)**
 
@@ -120,7 +127,7 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 - [#22617 fix: keep browser login working when the dev-keys API answers oddly](https://github.com/BasedHardware/omi/pull/22617) `MERGED`
 - [#22610 fix: report a refused config overwrite as an error, not an unexpected one](https://github.com/BasedHardware/omi/pull/22610) `MERGED`
 - [#22609 fix: stop a non-JSON key response crashing omi auth login](https://github.com/BasedHardware/omi/pull/22609) `MERGED`
-- [#22010 harden: enforce the conversation length bounds the CLI already declares](https://github.com/BasedHardware/omi/pull/22010) `OPEN`
+- [#22010 harden: enforce the conversation length bounds the CLI already declares](https://github.com/BasedHardware/omi/pull/22010) `MERGED`
 - [#22009 fix: record an unreadable config instead of raising out of load()](https://github.com/BasedHardware/omi/pull/22009) `MERGED`
 - [#22008 fix: stop reporting an unknown rate-limit policy as its own budget](https://github.com/BasedHardware/omi/pull/22008) `MERGED`
 - [#22007 fix: classify IPv4-mapped addresses in the webhook target check](https://github.com/BasedHardware/omi/pull/22007) `MERGED`
