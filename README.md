@@ -119,7 +119,7 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 <!-- activity:start -->
 
-**11 pull requests** to repositories I do not own · 8 merged · 2 open
+**12 pull requests** to repositories I do not own · 8 merged · 3 open
 
 **[BasedHardware/omi](https://github.com/BasedHardware/omi)**
 
@@ -133,6 +133,10 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 - [#22007 fix: classify IPv4-mapped addresses in the webhook target check](https://github.com/BasedHardware/omi/pull/22007) `MERGED`
 - [#13202 python-cli: add memory create-batch from UTF-8 JSON file](https://github.com/BasedHardware/omi/pull/13202) `OPEN`
 - [#13192 python-cli : file option to omi memory create](https://github.com/BasedHardware/omi/pull/13192) `OPEN`
+
+**[Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)**
+
+- [#4747 fix: resolve XAML codebehind independently of directory order](https://github.com/Graphify-Labs/graphify/pull/4747) `OPEN`
 
 **[harbor-framework/terminal-bench](https://github.com/harbor-framework/terminal-bench)**
 
