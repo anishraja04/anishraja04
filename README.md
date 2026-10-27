@@ -119,7 +119,7 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 <!-- activity:start -->
 
-**12 pull requests** to repositories I do not own · 8 merged · 3 open
+**12 pull requests** to repositories I do not own · 8 merged · 2 open
 
 **[BasedHardware/omi](https://github.com/BasedHardware/omi)**
 
@@ -136,7 +136,7 @@ engine, a Docker environment, and a scorer running 16 hidden input corpora again
 
 **[Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)**
 
-- [#4747 fix: resolve XAML codebehind independently of directory order](https://github.com/Graphify-Labs/graphify/pull/4747) `OPEN`
+- [#4747 fix: resolve XAML codebehind independently of directory order](https://github.com/Graphify-Labs/graphify/pull/4747) `CLOSED`
 
 **[harbor-framework/terminal-bench](https://github.com/harbor-framework/terminal-bench)**
 
