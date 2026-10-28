@@ -40,7 +40,7 @@ scorer that decides whether an agent genuinely solved it or merely looked like i
 | **Imperium** (via Mercor) | Real World Engineering | Data Engineering task author for long-horizon engineering tasks. |
 | **Chegg** | STEM (Computer Science) | Subject matter expert and STEM task author in computer science, writing and reviewing worked solutions that have to be correct end to end rather than plausible. |
 | **Alignerr** | | CFD task design on **OpenFOAM**, turning simulation problems into checkable engineering tasks. |
-| **Ethara AI** | | LLM post-training. |
+| **Ethara AI** · onsite | | LLM post-training. |
 
 **Domains I have authored in:** data engineering · STEM and engineering · computer science · computational fluid dynamics
 
