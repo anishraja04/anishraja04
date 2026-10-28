@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/BasedHardware/omi/pulls?q=is%3Apr+author%3Aanishraja04"><img src="https://img.shields.io/badge/omi_CLI-6_pull_requests-0B6477?style=for-the-badge&logo=github&logoColor=white" height="26" alt="omi pull requests" /></a>&nbsp;
+  <a href="https://github.com/BasedHardware/omi/pulls?q=is%3Apr+author%3Aanishraja04"><img src="https://img.shields.io/badge/omi_CLI-11_pull_requests-0B6477?style=for-the-badge&logo=github&logoColor=white" height="26" alt="omi pull requests" /></a>&nbsp;
   <a href="https://github.com/search?q=is%3Apr+author%3Aanishraja04&type=pullrequests"><img src="https://img.shields.io/badge/Open_source-PRs-24292F?style=for-the-badge&logo=git&logoColor=white" height="26" alt="Open-source pull requests" /></a>&nbsp;
   <a href="https://anishahamad.com"><img src="https://img.shields.io/badge/Portfolio-anishahamad.com-18A05F?style=for-the-badge&logo=firefox&logoColor=white" height="26" alt="Portfolio" /></a>
 </p>
@@ -38,10 +38,11 @@ scorer that decides whether an agent genuinely solved it or merely looked like i
 | **Handshake AI** · Project Insight | Terminal-Bench 4 | Benchmark task development, hands-on across task authoring and grading agent output. |
 | **Handshake AI** · Project LUMIERE | STEM (Engineering) | Engineering-domain task authoring, where a correct answer has to come from the underlying physics rather than from pattern-matching the prompt. |
 | **Imperium** (via Mercor) | Real World Engineering | Data Engineering task author for long-horizon engineering tasks. |
+| **Chegg** | STEM (Computer Science) | Subject matter expert and STEM task author in computer science, writing and reviewing worked solutions that have to be correct end to end rather than plausible. |
 | **Alignerr** | | CFD task design on **OpenFOAM**, turning simulation problems into checkable engineering tasks. |
 | **Ethara AI** | | LLM post-training. |
 
-**Domains I have authored in:** data engineering · STEM and engineering · computational fluid dynamics
+**Domains I have authored in:** data engineering · STEM and engineering · computer science · computational fluid dynamics
 
 ### What a task package actually contains
 
