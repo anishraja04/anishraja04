@@ -23,8 +23,6 @@
   <a href="https://anishahamad.com"><img src="https://img.shields.io/badge/Portfolio-anishahamad.com-18A05F?style=for-the-badge&logo=firefox&logoColor=white" height="26" alt="Portfolio" /></a>
 </p>
 
-<p align="center"><em>Every claim on this page links to something you can open and check.</em></p>
-
 ---
 
 ## Benchmark & evaluation work
