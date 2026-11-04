@@ -35,7 +35,7 @@ scorer that decides whether an agent genuinely solved it or merely looked like i
 | **Handshake AI** · Project Dynamo | Terminal-Bench 2 | Benchmark task development, authoring tasks that evaluate AI agents working in terminal environments. |
 | **Handshake AI** · Project Insight | Terminal-Bench 4 | Benchmark task development, hands-on across task authoring and grading agent output. |
 | **Handshake AI** · Project LUMIERE | STEM (Engineering) | Engineering-domain task authoring, where a correct answer has to come from the underlying physics rather than from pattern-matching the prompt. |
-| **Imperium** (via Mercor) | Real World Engineering | Data Engineering task author for long-horizon engineering tasks. |
+| **Mercor** | Real World Engineering | Data Engineering task author for long-horizon engineering tasks. |
 | **Chegg** | STEM (Computer Science) | Subject matter expert and STEM task author in computer science, writing and reviewing worked solutions that have to be correct end to end rather than plausible. |
 | **Alignerr** | | CFD task design on **OpenFOAM**, turning simulation problems into checkable engineering tasks. |
 | **Ethara AI** · onsite | | LLM post-training. |
